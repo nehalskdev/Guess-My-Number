@@ -20,10 +20,13 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent = 'No number';
 
-    
+
     // when player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number!!';
+
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
 
     // when guess is too high//
   } else if (guess > secretNumber) {
